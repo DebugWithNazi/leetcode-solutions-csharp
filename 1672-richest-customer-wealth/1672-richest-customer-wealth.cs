@@ -25,6 +25,6 @@ public class Solution {
         // }
         // return max;
         // ------------ another solution -----------
-        return account.Select(x => x.Sum()).Max();
+        return accounts.Select(x => x.Sum()).Max();
     }
 }
