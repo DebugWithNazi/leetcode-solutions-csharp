@@ -4,8 +4,8 @@ public class Solution {
         var sum = 0;
 
         while(n != 0){
-            var digit = nums.Add(n%10);
-            product *= digit;
+            var digit = n % 10;
+            prod *= digit;
             sum += digit;
             n = n / 10;
         }
