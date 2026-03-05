@@ -15,6 +15,6 @@ public class Solution {
         // return res;
         // ---------------------another solution------------------
         int max = candies.Max();
-        return candies.Select(x => x + extraCandies >= max).ToList();
+        return candies.Select(x => x + extraCandies >= max).ToArray();
     }
 }
