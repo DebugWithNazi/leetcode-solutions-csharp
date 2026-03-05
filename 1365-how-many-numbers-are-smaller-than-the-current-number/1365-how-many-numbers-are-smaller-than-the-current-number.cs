@@ -1,16 +1,24 @@
 public class Solution {
     public int[] SmallerNumbersThanCurrent(int[] nums) {
+        // var ans = new int[nums.Length];
+        // for(int i = 0; i<nums.Length; i++){
+        //     var count = 0;
+        //     for(int j =0; j <nums.Length; j++)
+        //     {
+        //         if(j!=i && nums[j]<nums[i])
+        //         {
+        //             count++;
+        //         }
+        //     }
+        //     ans[i] = count;
+        // }
+        // return ans;
+        // --------- another solution ----------
         var ans = new int[nums.Length];
+        var sorted = nums.OrderBy(x => x).ToArray();
+
         for(int i = 0; i<nums.Length; i++){
-            var count = 0;
-            for(int j =0; j <nums.Length; j++)
-            {
-                if(j!=i && nums[j]<nums[i])
-                {
-                    count++;
-                }
-            }
-            ans[i] = count;
+            ans[i] = Array.IndexOf(sorted,nums[i]);
         }
         return ans;
     }
