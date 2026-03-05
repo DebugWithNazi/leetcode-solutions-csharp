@@ -15,9 +15,16 @@ public class Solution {
 
         //   return max;
         // ------------ another solution -----------
-        int max = int.MinValue;
+        // int max = int.MinValue;
 
-        return accounts.Select(x => x.Sum()).Max();
-
+        // for(int i =0; i< accounts.Length; i++){
+        //      int sum = accounts[i].Sum();
+        //      if(max < sum){
+        //         max = sum;
+        //      }
+        // }
+        // return max;
+        // ------------ another solution -----------
+        return account.Select(x => x.Sum()).Max();
     }
 }
