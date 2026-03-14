@@ -1,6 +1,6 @@
 public class Solution {
     public int UniqueMorseRepresentations(string[] words) {
-        var res = new Dictionary<string, string>();
+        var res = new HashSet<string>();
         var dict = new Dictionary<char, string>();
             dict['a'] = ".-";
             dict['b'] = "-...";
@@ -35,9 +35,7 @@ public class Solution {
                 foreach(var chr in word){
                    newMap += dict[chr];
                 }
-                if(!res.ContainsKey(newMap)){
-                    res[newMap] = newMap;
-                }
+                res.Add(newMap);
             }
             return res.Count();
 
