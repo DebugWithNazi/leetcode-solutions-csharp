@@ -18,8 +18,8 @@ public class Solution {
             count++;
             current = current.next;
         }
-        int i = 0;
-        for(; i<count/2; i++)
+        
+        for(int i = 0; i<count/2; i++)
         {
             head = head.next;
         }
