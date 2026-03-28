@@ -13,12 +13,11 @@
  */
 public class Solution {
     public int MaxDepth(TreeNode root) {
-        if(root == null)
-            return 0;
-        
-        var left = MaxDepth(root.left);
-        var right = MaxDepth(root.right);
+        if(root == null) return 0;
 
-        return Math.Max(left,right) + 1;
+        var left = MaxDepth(root.left)+ 1;
+        var right = MaxDepth(root.right)+ 1;
+        var depth = Math.Max(left,right);
+        return depth;
     }
 }
