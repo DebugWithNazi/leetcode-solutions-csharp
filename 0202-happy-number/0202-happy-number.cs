@@ -3,6 +3,7 @@ public class Solution {
         if(n == 1) return true;
         var seen = new HashSet<int>();
         var digit = 0;
+
         while(n != 1){
            if(seen.Contains(n)) return false;
            seen.Add(n);
@@ -18,6 +19,5 @@ public class Solution {
             return true;
            }
         }
-        return false;
     }
 }
