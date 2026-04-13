@@ -22,3 +22,5 @@ public class Solution {
         }
     }
 }
+// O(T) = O(2^N.N)
+//O(s) = O(N)
